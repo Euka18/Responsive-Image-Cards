@@ -1,0 +1,100 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #030514;
+}
+.imageCards_Container
+{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.imageCards_Container .imgContainer
+{
+    position: relative;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.imageCards_Container .imgContainer .img_Card
+{
+    position: relative;
+    margin: 20px;
+    height: 60vh;
+    flex: .5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+.imageCards_Container .imgContainer .img_Card img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.imageCards_Container .imgContainer .img_Card.active
+{
+    flex: 3;
+}
+
+@media (max-width: 480px) 
+{
+    .imageCards_Container
+    {
+        padding: 10px;
+    }
+    .imageCards_Container .imgContainer
+    {
+        width: 100vw;
+        flex-direction: column;
+    }
+    .imageCards_Container .imgContainer .img_Card
+    {
+        margin: 20px;
+        height: 5vh;
+        width: 80vw;
+        flex: auto;
+    }
+    .imageCards_Container .imgContainer .img_Card.active
+    {
+        height: 20vh;
+        flex: auto;
+    }
+}
+@media (min-width: 480px) and (max-width: 992px) 
+{
+    .imageCards_Container
+    {
+        padding: 10px;
+    }
+    .imageCards_Container .imgContainer
+    {
+        width: 100vw;
+        flex-direction: column;
+    }
+    .imageCards_Container .imgContainer .img_Card
+    {
+        margin: 20px;
+        height: 5vh;
+        width: 80vw;
+        flex: auto;
+    }
+    .imageCards_Container .imgContainer .img_Card.active
+    {
+        height: 30vh;
+        flex: auto;
+    }
+}
